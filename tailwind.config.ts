@@ -75,9 +75,6 @@ export default {
 				'glow': 'var(--glow-primary)',
 				'glow-sm': 'var(--glow-secondary)'
 			},
-			animation: {
-				'pulse-glow': 'pulse-glow 2s ease-in-out infinite alternate'
-			},
 			borderRadius: {
 				lg: 'var(--radius)',
 				md: 'calc(var(--radius) - 2px)',
@@ -99,11 +96,20 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				'pulse-glow': {
+					'0%': {
+						boxShadow: '0 0 20px hsl(200 98% 39% / 0.4)'
+					},
+					'100%': {
+						boxShadow: '0 0 40px hsl(200 98% 39% / 0.8), 0 0 60px hsl(217 91% 60% / 0.4)'
+					}
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'pulse-glow': 'pulse-glow 2s ease-in-out infinite alternate'
 			}
 		}
 	},
